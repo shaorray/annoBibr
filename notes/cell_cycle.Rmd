@@ -1,0 +1,60 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+source("R_note.R")
+note_list[1]
+```
+
+------------------------------------------------------------------------------------------
+[title]
+Regulation of cell cycle progression and gene expression by H2A deubiquitination
+
+[tag]
+HeLa stable cell lines; Flag–H2A was purification
+
+
+[group]
+cell cycle; H2Aub
+
+[summary]
+first H2A deubiquitinatase characterization. HeLa cell might have different H2Aub propagation to mESC
+
+[quote]
+ubH2A levels begin to decrease when cells enterMphase (7 h), reach very low levels when cells are in M phase (9 h), start to recover as cells exit from M phase (10–11 h), and are restored to normal levels when cells enter G1/S (12–18 h; Fig. 3c, first panel, and Supplementary Fig. 8a).
+[?] How H2Aub changes in cell cycle phases
+
+------------------------------------------------------------------------------------------
+[title]
+Disappearance of a structural chromatin protein A24 in mitosis: implications for molecular basis of chromatin condensation
+
+[tag]
+Chinese hamster cell line
+
+[quote]
+ubiquitin bound to H2A of nucleosomal surfaces in interphase is released at mitosis whereas the total H2A remains as a structural component of nucleosomes.
+
+------------------------------------------------------------------------------------------
+[title]
+
+
+------------------------------------------------------------------------------------------
+[title]
+
+
+------------------------------------------------------------------------------------------
+[title]
+
+
+------------------------------------------------------------------------------------------
+[title]
+
+
+------------------------------------------------------------------------------------------
+[title]
