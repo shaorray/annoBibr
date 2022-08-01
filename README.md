@@ -1,11 +1,11 @@
 
-`annoBibr` Bibliography annotation utility
+`annoBibr` Bibliography annotation tool
 
 ---
 
-#### Annotated notes in R markdown
+#### Annotate R Markdown notes
 
-In the follow style:
+In the following style:
 ```
 [title] 
 An example article title ends with a newline (special punctuates are allowed, only except for the concatenated the dollar mark and "title")
