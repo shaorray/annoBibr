@@ -20,24 +20,7 @@ source("../R_note.R")
 ```
 
 
-#### Annotated bibliography
----
 
-Example:
-
-[title] 
-An example article title ends with a newline (special punctuates are allowed, only except for the concatenated the dollar mark and "title")
-
-[tag]
-semi-colon separated; projects; lab or techniques
-
-[group]
-areas of study; domains of knowledge
-
-[quote]
-Sentences from the article.
-
-[?] A question to the quote, available in "questions" list to choose from.
 
 ------------------------------------------------------------------------------------------
 
@@ -1244,11 +1227,16 @@ H3K27me3; H3K36me3
 A High-Density Map for Navigating the Human Polycomb Complexome
 
 [tag]
-unread
+affinity purification mass spectrometry
 
 [group]
-review
+PRC2; PR-DUB
 
+[quote]
+PR-DUB core components share a similar set of acces-
+sory proteins encompassing the transcription factors FOXK1 and FOXK2, the chromatin associated proteins MBD5 and MBD6, the transcriptional co-regulator HCFC1, and most notably OGT1
+
+[?] Does BAP1 directly activate transcription?
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1686,12 +1674,18 @@ we found that variant PRC1 forms can sense H2AK119ub1 deposition, which contribu
 
 ------------------------------------------------------------------------------------------
 [title]
+Promoter bivalency favors an open chromatin architecture in embryonic stem cells
 
+[group]
+Bivalency; 
 
+[quote]
+(transcriptional change in MLL2 depletion) relatively modest in non-bivalent genes (Fig. 5i,j). Hence, MLL2 plays a role in maintaining a basal level of accessibility and nascent bidirectional transcription around bivalent TSS
+[?] How does H3K4me3 affect transcription?
 
 ------------------------------------------------------------------------------------------
 [title]
-
+Polycomb Group Proteins Regulate Chromatin Architecture in Mouse Oocytes and Early Embryos
 
 
 ------------------------------------------------------------------------------------------
