@@ -119,13 +119,13 @@ note_R6 <- R6Class("Note",
                        is_match <- FALSE
                        
                        if (!is.na(field) & all(field %in% names(self))) {
-                         is_match <- is_match | any(grepl(keyword, self[[field]]))
+                         is_match <- is_match | any(grepl(keyword, self[[field]], ignore.case = TRUE))
                          self[[field]] <- gsub(keyword, crayon::bgRed(keyword), 
                                                self[[field]], ignore.case = TRUE)
                        }
                        
                        for (field in c("title", "group", "tag", "summary", "quote", "question")) {
-                         is_match <- is_match | any(grepl(keyword, self[[field]]))
+                         is_match <- is_match | any(grepl(keyword, self[[field]], ignore.case = TRUE))
                          self[[field]] <- gsub(keyword, crayon::bgYellow(keyword), 
                                                self[[field]], ignore.case = TRUE)
                        }
