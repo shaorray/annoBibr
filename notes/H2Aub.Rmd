@@ -20,7 +20,9 @@ source("../R_note.R")
 ```
 
 
-
+```{r}
+note_list[[13]]
+```
 
 ------------------------------------------------------------------------------------------
 
@@ -50,6 +52,9 @@ Following OHT treatment, RING1B binding was majorly reduced at sites that normal
 [?] PcG distribution in response to H2Aub change
 
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title] 
@@ -81,6 +86,9 @@ H2A deubiquitination is a required step in a series of chromatin remodelling eve
 Deubiquitination (M132) increase interphase gene expression, but not mitotic phase.
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 H2A.Z.1 Monoubiquitylation Antagonizes BRD2 to Maintain Poised Chromatin in ESCs
@@ -97,6 +105,9 @@ We show that H2A.Z.1K3R3 is properly incorporated at target promoters in murine 
 [?] How H2Aub depletion affects chromatin-associated proteins.
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 BAP1 links metabolic regulation of ferroptosis to tumour suppression
@@ -110,6 +121,9 @@ BAP1; cancer
 [quote]
 Functional studies reveal that BAP1 decreases H2Aub occupancy on the SLC7A11 promoter and represses SLC7A11 expression in a deubiquitinating-dependent manner
 [?] How BAP1 represses gene expression?
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -138,6 +152,9 @@ Ring1B (I53S) and Ring1B (I53A) could slightly restore the repression of Hoxa9, 
 [?] How important is PRC1 catalytic vs non-catalytic function?
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 R-Loops Enhance Polycomb Repression at a Subset of Developmental Regulator Genes 
@@ -149,6 +166,9 @@ R-loop; Polycomb
 At R-loop-positive genes, R-loop removal leads to decreased PRC1 and PRC2 recruitment and Pol II activation into a productive elongation state, accompanied by gene derepression at nascent and processed transcript levels.
 [?] R-Loops Contribute to PcG Recruitment but not H2Aub
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -169,6 +189,9 @@ Instead, the Polycomb repressive complex 1 (PRC1) appears to play a unique role 
 
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Occupying Chromatin: Polycomb Mechanisms for Getting to Genomic Targets, Stopping Transcriptional Traffic, and Staying Put
@@ -176,6 +199,9 @@ Occupying Chromatin: Polycomb Mechanisms for Getting to Genomic Targets, Stoppin
 [quote]
 Recombinant PRC1 inhibited binding of the Mediator complex, to the template but had little impact on binding of the general transcription factor TFIID.
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -196,6 +222,9 @@ loss of PRC1 mediated-interactions does not necessarily lead to gene expression
 [?] are PRC1 mediated-interactions important for gene repression?
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Transcriptional repression by PRC1 in the absence of H2A monoubiquitylation
@@ -205,6 +234,9 @@ drosophila might be different
 
 [quote]
 However, H2Aub-deficient animals fully maintain repression of PRC1 target genes and do not show phenotypes characteristic of Polycomb group mutants.
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -216,6 +248,9 @@ PRC2 recruitment
 [quote]
 CpG density combined with antagonistic effects of H3K9me3 and H3K36me3 redirects PcG complexes to pericentric heterochromatin and gene-rich do-mains.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Role of remodeling and spacing factor 1 in histone H2A ubiquitination-mediated gene silencing
@@ -226,6 +261,9 @@ RSF1 knockout does not affect RNF2/Ring1B or H2Aub levels but leads to derepress
 [quote]
 RSF1 KO changed +1 +2 H2Aub nucleosome spacing.
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -245,12 +283,18 @@ In I53A epidermal progenitors, the binding of PRC2 subunit SUZ12 and the levels 
 [?] Is H3K27me3 subject to PRC1 non-catalytic activity?
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 PRC1 preserves epidermal tissue integrity independently of PRC2
 
 [quote]
 PRC1 promotes expression of critical epidermal adhesion genes independently of PRC2-mediated H3K27me3.
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -275,6 +319,9 @@ RYBP to chromatin was significantly impaired by Ring1bI53A
 we found that RYBP or YAF2 binds H2AK119ub1 through its NZF domain and recruits the PRC1 complex to catalyse the ubiquitination of H2A on neighbouring nucleosomes in a cis manner
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Synergy between Variant PRC1 Complexes Defines Polycomb-Mediated Gene Repression
@@ -288,6 +335,9 @@ canonical Polycomb repressive complex 1 (PRC1), which mediates higher-order chro
 [quote]
 variant PRC1 complexes are responsible for distinct pools of H2A monoubiquitylation that are associated with repression of Polycomb target genes and silencing during X chromosome inactivation
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Live-cell single particle tracking of PRC1 reveals a highly dynamic system with low target site occupancy
@@ -298,6 +348,9 @@ with only a small fraction stably interacting with chromatin
 [quote]
 PCGF2-PRC1 is the most abundant PRC1 complex in ESCs
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -321,6 +374,9 @@ PRC1-mediated gene repression does not rely directly on PRC2 or H3K27me3.
 New initiation is required for Polycomb target gene expression.
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 RYBP and Cbx7 Define Specific Biological Functions of Polycomb Complexes in Mouse Embryonic Stem Cells
@@ -328,6 +384,9 @@ RYBP and Cbx7 Define Specific Biological Functions of Polycomb Complexes in Mous
 [quote]
 Genes occupied by RYBP show lower levels of Ring1B and H2AK119ub and are consequently more highly tran- scribed than those bound by Cbx7.
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -339,6 +398,9 @@ first PR-DUB characterization
 [quote]
 Biochemically purified Calypso exists in a complex with the PcG protein ASX, and this complex, named Polycomb repressive de-ubiquitinase (PR-DUB), is bound at PcG target genes in Drosophila.
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -353,6 +415,9 @@ PRC1; nucleosome compaction
 We show that PRCs are required to maintain a compact chromatin state at Hox loci in embryonic stem cells (ESCs). not dependent on its histone ubiquitination activity.
 [?] How does PRC1 compact chromatin?
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Polycomb repressive complex PRC1 spatially constrains the mouse embryonic stem cell genome
@@ -364,6 +429,9 @@ promoter- enhancer contacts are maintained in the absence of Polycomb repression
 [quote]
 PRC1-bound promoters preferentially contact poised enhancers.
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -387,6 +455,9 @@ Importantly, the majority of the genes (83%, de-repressed) were only enriched fo
 
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Polycomb repressive complex PRC1 spatially constrains the mouse embryonic stem cell genome
@@ -397,6 +468,9 @@ chromatin interaction; PRC1
 [quote]
 The strongest spatial network is composed of the four Hox gene clusters and early developmental transcription factor genes, the majority of which contact poised enhancers.
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -411,6 +485,9 @@ The genomic loci of repressed PcG targets formed discrete, small (20–140 Kb) d
 [quote]
 Variant PRC1 Complexes Are Not Necessary for Domain Formation
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 A Cbx8-Containing Polycomb Complex Facilitates the Transition to Gene Activation during ES Cell Differentiation
@@ -421,6 +498,9 @@ PRC1; differentiation
 [quote]
 the exchange of Cbx7 for Cbx8 is required for the effective activation of differentiation genes...our results establish a function for a Cbx8-containing complex in facilitating the transition from a Polycomb-repressed chromatin state to an active state.
 [?] Do PRC1 subunits have different role?
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -435,6 +515,9 @@ PRCs and RNAPII-S5p physically bind to the same chromatin and functionally syner
 [quote]
 we identify a cohort of genes marked by PRC and elongating RNAPII (S5p+S7p+S2p+); they produce mRNA and protein, and their expression increases upon PRC1 knockdown	
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Histone H2A Monoubiquitination Represses Transcription by Inhibiting RNA Polymerase II Transcriptional Elongation
@@ -446,6 +529,9 @@ H2Aub; transcription
 H2A monoubiquitination acts to prevent FACT recruitment at the transcriptional promoter region, blocking RNA polymerase II release at the early stage of elongation
 [?] How H2Aub depletion activates genes?
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -473,6 +559,9 @@ Polycomb target genes rely on BAP1 for their silencing
 [?] contribution of PcG binding in Polycomb target genes repression
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 BAP1 complex promotes transcription by opposing PRC1-mediated H2A ubiquitylation
@@ -483,6 +572,9 @@ BAP1
 [quote]
 We investigate the mechanism underlying BAP1.com-mediated transcriptional regulation and show that it does not participate in Polycomb-mediated silencing. Instead, our results establish that the function of BAP1.com is to safeguard transcriptionally active genes against silencing by the Polycomb Repressive Complex 1.
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -497,6 +589,9 @@ we show that BAP1 is dependent on the ASXL proteins and FOXK1/2 in facilitating 
 [quote]
 minimal overlap and functional interaction between BAP1 and PRC2 in embryonic stem cells
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -516,6 +611,9 @@ PCGF3/5 (vPRC1.3/5) are primarily responsible for BAP1-opposed H2AK119ub1 (not v
 BAP1-unique targets: gain of H3K27me3 deposition 50 to the TSS that was independent of de novo SUZ12 binding; RING1B targets: both H3K27me3 and SUZ12 levels were reduced in the absence of BAP1. RYBP binding at the same sites remained unaltered.
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 BAP1 regulates epigenetic switch from pluripotency to differentiation in developmental lineages giving rise to BAP1-mutant cancers
@@ -529,6 +627,9 @@ Bap1 is critical for commitment to ectoderm, mesoderm, and neural crest lineages
 [quote]
 Bap1 regulates lineage commitment through H3K27ac-mediated transcriptional activation
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -546,6 +647,9 @@ PRC1-mediated long-range interactions are independent of CTCF and can bridge sit
 [quote]
 transcriptional activation and the loss of PRC1-mediated interactions are separable events
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -567,6 +671,9 @@ loss of PRC2 activity resulted in a global increase of H3K27ac levels
 [quote]
 Ezh1 KO EBs displayed normal morphology with respect to WT cells
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -590,6 +697,9 @@ this apparent failure of PRC2 and H3K27me3 to direct H2AK119ub1 parallels observ
 [?] How does H3K27me3 involve in H2Aub mediated repression?
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 H2AK119ub1 guides maternal inheritance and zygotic deposition of H3K27me3 in mouse embryos
@@ -603,6 +713,9 @@ embryo
 [quote]
 From the two-cell stage, H2AK119ub1 is progressively deposited at typical Polycomb targets and precedes H3K27me3.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Polycomb Repressive Complex 2 Methylates Elongin A to Regulate Transcription
@@ -613,6 +726,9 @@ PRC2; transcription
 [quote]
 PRC2 modulates expression of target genes in part via methylation of EloA.
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -628,6 +744,9 @@ BAP1
 Gal4-BAP1 catalytically inactive mutant (C91S) was unable to activate transcription, suggesting that BAP1 regulates gene ex- pression in a DUB activity-dependent manner
 [?] How BAP1 actiates transcription?
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Frequent mutation of BAP1 in metastasizing uveal melanomas.
@@ -637,6 +756,9 @@ BAP1; cancer
 
 [quote]
 These findings implicate loss of BAP1 in uveal melanoma metastasis and suggest that the BAP1 pathway may be a valuable therapeutic target
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -657,6 +779,9 @@ BAP1 orchestrates cell proliferation, cell differentiation, cell death, and cell
 [quote]
 BAP1 is a critical reg-ulator of stem/progenitor self-renewal and cell fate in multiple tissues and at multiple stages of development.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Loss of BAP1 function leads to EZH2-dependent transformation
@@ -666,6 +791,9 @@ BAP1; cancer
 
 [quote]
 Loss of BAP1 results in a marked decrease in H4K20 monomethylation (H4K20me1).
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -678,6 +806,9 @@ BAP1; cancer
 We show that mouseBap1gene deletion is lethal during embryogenesis
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Polycomb group-mediated histone H2A monoubiquitination in epigenome regulation and nuclear processes
@@ -688,6 +819,9 @@ review
 [group]
 H2Aub
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -709,6 +843,9 @@ Loss of either PRC2.1 or PRC2.2 is insufficient to deplete H3K27me3 at target si
 JARID2-PRC2.2 chromatin association is specifically dependent on PRC1
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Jarid2 binds mono-ubiquitylated H2A lysine 119 to mediate crosstalk between Polycomb complexes PRC1 and PRC2
@@ -717,6 +854,9 @@ Jarid2 binds mono-ubiquitylated H2A lysine 119 to mediate crosstalk between Poly
 H2Aub; Jarid2
 
 [quote]
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -730,6 +870,9 @@ Importantly, loss of H2Aubq did not affect the global deposition of H3K27me3, sh
 [?] Is H3K27me3 subject to PRC1 non-catalytic activity?
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 RYBP-PRC1 complexes mediate H2A ubiquitylation at polycomb target sites independently of PRC2 and H3K27me3
@@ -739,6 +882,9 @@ PRC1; Rybp
 
 [quote]
 RYBP-PRC1...an H3K27me3-independent pathway for recruitment of PRC1 activity
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -758,6 +904,9 @@ However, H2Aub-deficient animals fully maintain repression of PRC1 target genes 
 [quote]
 Polycomb repression of the HOX and en genes is thus unaffected in embryos lacking H2Aub.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Theoretical analysis of Polycomb-Trithorax systems predicts that poised chromatin is bistable and not bivalent
@@ -774,6 +923,9 @@ Bivalent chromatin, containing opposing active and silent modifications, is pres
 [quote]
 Surprisingly, the predominant active bivalent form that we predict (co-occurrence of H3K27ac and H2Aub on the same nucleosome) has not been addressed experimentally to our knowledge.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Capturing the Onset of PRC2-Mediated Repressive Domain Formation
@@ -788,6 +940,9 @@ They elucidate the role of genome architecture in formation of these domains and
 [quote]
 First, PRC2 is stably recruited by the actions of JARID2 and MTF2 to a limited number of spatially interacting ‘nucleation sites,’ creating H3K27me3-forming Polycomb foci within the nucleus.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Regulation of gene transcription by Polycomb proteins
@@ -796,6 +951,9 @@ Regulation of gene transcription by Polycomb proteins
 review
 
 [quote]
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -808,6 +966,9 @@ PRC1; transcription
 We provide evidence that this poised RNAP configuration is enforced by Polycomb Repressor Complex (PRC)-mediated ubiquitination of H2A, as conditional deletion of Ring1A and Ring1B leads to the sequential loss of ubiquitination of H2A, release of poised RNAP, and subsequent gene de-repression.
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 H2AZ Is Enriched at Polycomb Complex Target Genes in ES Cells and Is Necessary for Lineage Commitment
@@ -819,6 +980,9 @@ H2AZ is lost in differentiated ESCs, in which H3K27me3 associates to repressed r
 H2A.Z
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Two competing mechanisms of DNMT3A recruitment regulate the dynamics of de novo DNA methylation at PRC1-targeted CpG islands
@@ -826,12 +990,18 @@ Two competing mechanisms of DNMT3A recruitment regulate the dynamics of de novo 
 [group]
 DNA methylation; H2Aub; PRC1
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Histone H2A monoubiquitination and Polycomb repression: the missing pieces of the puzzle
 
 [group]
 review
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -851,6 +1021,9 @@ Propagation of gene repression is sustained by cis-acting histone modifications,
 However, after release only Cbx7-initiated repressive chromatin can be maintained through genome replication and cell divisions.
 [?] are PRC1 mediated-interactions important for gene repression?
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Parallel PRC2/cPRC1 and vPRC1 pathways silence lineage-specific genes and maintain self-renewal in mouse embryonic stem cells
@@ -867,6 +1040,9 @@ Individual loss of PRC2-dependent cPRC1 or PRC2-independent vPRC1 disrupts only 
 
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Nuclear condensates of the Polycomb protein chromobox 2 (CBX2) assemble through phase separation
@@ -877,6 +1053,9 @@ cPRC1; Cbx
 [quote]
 the conserved residues of CBX2 within the intrinsically disordered region (IDR), which is the region for compaction ofchromatin in vitro, promote the condensate formation both in vitro and in vivo. ...(H3K27me3), a marker of heterochromatin formation produced by PRC2, had minimal effects on the CBX2 condensate formation
 [?] How does PRC1 compact chromatin?
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -892,12 +1071,18 @@ PRC1; PRC2
 the genes interacting with PEs tend to be preferentially involved in developmental processes...the contacts between PEs and bivalent promoters were globally reduced in PRC1 null cells (Fig. 4b)...our global analyses indicate that PRC1 is required for proper PE–target gene communication in ESC.
 [?] How does PRC1 compact chromatin?
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 BAP1 and YY1 regulate expression of death receptors in malignant pleural mesothelioma
 
 [quote]
 These re- sults suggest that BAP1 and YY1 cooperatively repress tran- scription of TRAIL receptors. Our finding that BAP1 directly regulates the extrinsic apoptotic pathway will provide new in- sights into the role of BAP1 in the development of MPM and other cancers with frequent BAP1 mutations.
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -909,6 +1094,9 @@ TF; Wnt
 [quote]
 we demonstrate that PRC1 repressesa largenumber of non-line- age-specific transcription factors that directly affect b-catenin/Tcf transcriptional activity.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 An Adversarial DNA N6-Methyladenine-Sensor Network Preserves Polycomb Silencing
@@ -918,6 +1106,9 @@ An Adversarial DNA N6-Methyladenine-Sensor Network Preserves Polycomb Silencing
 
 [quote]
 Deposition of 6mA by Mettl4 triggers the proteolytic destruction of both sensor proteins, preserving genome-wide H2A-K119Ub levels. 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -929,6 +1120,9 @@ review
 [quote]
 Recent studies have challenged this model and suggest that histone marks previously associated with active genes do not directly cause transcriptional activation. 
 [?] If active histone marks activate transcription?
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -942,6 +1136,9 @@ PRC1 relies on Ub for transient silencing of poised neuronal genes in neurogenic
 [?] How PRC1 regulates gene expression program?
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Loss of PRC1 activity in different stem cell compartments activates a common transcriptional program with cell type–dependent outcomes
@@ -951,6 +1148,9 @@ PRC1; differentiation
 
 [quote]
 the final outcome of the ectopic activation of non–lineage-specific transcription factors observed upon loss of PRC1 is largely context-dependent and likely related to the transcription factors repertoire and specific epigenetic landscape of different cellular compartments.
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -967,6 +1167,9 @@ PRC2 Is Not Required for Initiation but Is Required for Maintenance of Transcrip
 Inhibition of Transcription Induces PRC2 Recruitment to New Targets Genome Wide
 [?] How does PRC2 repress transcription?
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Integrative Proteomic Profiling Reveals PRC2-Dependent Epigenetic Crosstalk Maintains Ground-State Pluripotency
@@ -977,6 +1180,9 @@ Integrative Proteomic Profiling Reveals PRC2-Dependent Epigenetic Crosstalk Main
 [quote]
 Polycomb-repressive complex 2 (PRC2) and its productH3K27me3 are highly abundant in 2i/LIF ESCs, and H3K27me3 is distributed genome-wide in a CpG-dependent fashion. 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Loss of BAP1 function leads to EZH2-dependent transformation
@@ -986,6 +1192,9 @@ BAP1; H3K27me3; PRC2
 
 [quote]
 Bap1 loss in mice results in increased trimethylated histone H3 lysine 27 (H3K27me3), elevated enhancer of zeste 2 polycomb repressive complex 2 subunit (Ezh2) expression, and enhanced repression of polycomb repressive complex 2 (PRC2) targets.
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -998,6 +1207,9 @@ G4; PRC2
 PRC2 preferentially binds G tracts within nascent precursor mRNA (pre-mRNA), especially within predicted G-quadruplex structures. G-quadruplex RNA evicts the PRC2 catalytic core from the substrate nucleosome. In cells, PRC2 transfers from chromatin to pre-mRNA upon gene activation, and chromatin-associated G-tract RNA removes PRC2, leading to H3K27me3 depletion from genes.
 [?] R-loop is associated with PRC1/2 but not H2Aub
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1014,6 +1226,9 @@ PCGF2 associates with transcription repression, whereas PCGF3 and PCGF6 associat
 While Pcgf1/2/4 KO showed no effects on cell viability, Pcgf3/5/6 KO clones displayed severe morpho- logical changes acquiring a flattened fibroblast-like shape ... Combined loss of the PCGF1/2/4 resulted in complete RING1B displacement and loss of H2Aub1 specifically at all PCGF2-occupied loci (Figures 4D, 4E, S7D, and S7E), remaining unaltered in Pcgf3/5/6 KOs (Figures
 [?] What are PRC1 sub-units' function?
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 The molecular principles of gene regulation by Polycomb repressive complexes
@@ -1026,6 +1241,9 @@ However, removal of both PRC1 and PRC2 together caused a more pronounced dere- p
 [?] How does PRC1 collaborate with PRC2?
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Ubiquitination-independent repression of PRC1 targets during neuronal fate restriction in the developing mouse neocortex
@@ -1036,6 +1254,9 @@ H2Aub;
 [quote]
 PRC1 relies on Ub for transient silencing of poised neuronal genes in neurogenic neural stem/ progenitor cells and persistently silences the same genes independently of Ub during neuronal fate restriction in mammalian development.
 [?] Does H2Aub always repress gene expression in development?
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1048,6 +1269,9 @@ poised enhancer; PRC2
 Poised enhancers physically interact with their target genes in embryonic stem cells in a PRC2- dependent manner
 [?] are PRC1 mediated-interactions important for gene repression?
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 XHira-dependent histone H3.3 deposition facilitates prc2 recruitment at developmental loci in ES cell
@@ -1057,6 +1281,9 @@ H3.3; PRC2
 
 [quote]
 Upon H3.3 depletion, these promoters show reduced nucleosome turn- over measured by deposition of de novo synthesized histones and reduced PRC2 occupancy.
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1074,6 +1301,9 @@ H3.3 greatly impaired higher-ordered chromatin folding and promoted gene activat
 [quote]
 the H3.3-dependent recruitment of H2A.Z on promoter regions resulted in compaction of chromatin to poise transcription
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Distinct PRC2 subunits regulate maintenance and establishment of Polycomb repression during differentiation
@@ -1088,6 +1318,9 @@ PRC2.1; PRC2.2
 Depletion of either MTF2 or JARID2 resulted in incomplete differentiation due to defects in gene regulation.
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Bap1/asxl complex modulation regulates epithelial-mesenchymal transition during trophoblast differentiation and invasion
@@ -1098,6 +1331,9 @@ BAP1; placenta
 [quote]
 the downregulation of BAP1 protein is essential to trigger epithelial-mesenchymal transition (EMT) during trophoblast differentiation associated with a gain of invasiveness.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Regulation of H2A ubiquitination and SLC7A11 expression by BAP1 and PRC1
@@ -1107,6 +1343,9 @@ H2Aub; BAP1
 
 [quote]
 both BAP1 and PRC1 represses SLC7A11 expression, suggesting that a dynamic regulation of H2Aub is important for SLC7A11 repression
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1119,6 +1358,9 @@ PRC2; pausing
 ablating PRC2 further upregulates expression via loss of pausing and enhanced transcription elongation
 [?] How PRC2 represses gene expression?
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 The E3 ubiquitin ligase activity of RING1B is not essential for early mouse development
@@ -1130,6 +1372,9 @@ not complete ablation with Ring1b I53A
 H2Aub
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Competition between PRC2.1 and 2.2 subcomplexes regulates PRC2 chromatin occupancy in human stem cells
@@ -1139,6 +1384,9 @@ PRC2.1; PRC2.2
 
 [quote]
 PRC2.1 is required for HOX gene silencing
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1154,6 +1402,9 @@ Histone modifications, the H3K27M cancer mutation, and inclusion of JARID2 or EZ
 RNA sequesters PRC2 from nucleosome substrates, because PRC2 binding requires linker DNA, and RNA and DNA binding are mutually exclusive
 [?] How PRC2 represses gene expression?
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 PCGF5 is required for neural differentiation of embryonic stem cells
@@ -1164,6 +1415,9 @@ Pcgf5; vPRC1
 [quote]
 PCGF5 loss-of-function impairs the reduction of H2AK119ub1 and H3K27me3 around neural specific genes and keeps them repressed
 [?] How does vPRC1 activate developmental genes?
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1184,6 +1438,9 @@ PRC2 could re-establish H3K27me3 patterns de novo with high fidelity genome-wide
 [quote]
 H3K36me3, which is associated with transcriptional elongation, was much more enriched over irreversible genes than over reversible genes
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 mSWI/SNF promotes Polycomb repression both directly and through genome-wide redistribution
@@ -1193,6 +1450,9 @@ mSWI/SNF promotes Polycomb repression both directly and through genome-wide redi
 [quote]
 We report that rapid BAF depletion redistributes Polycomb repressive complexes PRC1 and PRC2 from highly occupied domains, like Hox clusters, to weakly occupied sites normally opposed by BAF.
 [?] PcG distribution in response to H2Aub change
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1204,12 +1464,18 @@ cPRC1; Cbx2; Phase separation
 [quote]
 We show here that reconstituted PRC1 readily phase-separates into droplets in vitro at low concentrations and physiological salt conditions
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Polycomb Repressive Complexes in Hox Gene Regulation: Silencing and Beyond: The Functional Dynamics of Polycomb Repressive Complexes in Hox Gene Regulation
 
 [group]
 review
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1221,6 +1487,9 @@ modeling
 [group]
 H3K27me3; H3K36me3
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1238,6 +1507,9 @@ sory proteins encompassing the transcription factors FOXK1 and FOXK2, the chroma
 
 [?] Does BAP1 directly activate transcription?
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Intrinsic apoptosis shapes the tumor spectrum linked to inactivation of the deubiquitinase BAP1
@@ -1251,6 +1523,9 @@ We show that BAP1 inactivation causes apoptosis in mouse embryonic stem cells, f
 [quote]
 BAP1 loss or inactivationalso killed cultured ES cells 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Uncoupling histone H3K4 trimethylation from developmental gene expression via an equilibrium of COMPASS, Polycomb and DNA methylation
@@ -1260,6 +1535,9 @@ H3K4me3
 
 [quote]
 We found that MLL2 functions in gene expression by protecting developmental genes from repression via repelling PRC2 and DNA methylation machineries. Accordingly,
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1271,6 +1549,9 @@ H2Aub; H3K27me3
 [quote]
 revealed an unexpected genomewide decoupling of H2Aub and H3K27me3 in mouse preimplantation embryos, where H2Aub but not H3K27me3 was enriched at PcG targets while only H3K27me3 was deposited in the broad distal domains associated with DNA methylation-independent non-canonical imprinting
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Establishment of developmental gene silencing by ordered polycomb complex recruitment in early zebrafish embryos
@@ -1280,6 +1561,9 @@ embryo; H2Aub
 
 [quote]
 Poising is established at promoters and enhancers that initially contain open/permissive chromatin with ‘Placeholder’ nucleosomes (bearing H2A.Z, H3K4me1, and H3K27ac), and DNA hypomethylation
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Functions of Polycomb Proteins on Active Targets
@@ -1292,6 +1576,9 @@ review
 
 [quote]
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 R-Loops Enhance Polycomb Repression at a Subset of Developmental Regulator Genes
@@ -1302,6 +1589,9 @@ R-Loop
 [quote]
 At R-loop-positive genes, R-loop removal leads to decreased PRC1 and PRC2 recruitment and Pol II activation into a productive elongation state, accompanied by gene derepres- sion at nascent and processed transcript levels.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 H3K27me3-rich genomic regions can function as silencers to repress gene expression via chromatin interactions
@@ -1309,6 +1599,9 @@ H3K27me3-rich genomic regions can function as silencers to repress gene expressi
 [group]
 H3K27me3; chromatin interaction
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1320,6 +1613,9 @@ unread
 [group]
 review
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Cohesin Disrupts Polycomb-Dependent Chromosome Interactions in Embryonic Stem Cells
@@ -1330,6 +1626,9 @@ chromatin interaction; cohesin
 [quote]
 PRC1 contributes little to A/B compartmentalization and TADs but is responsible for long- range chromosomal interactions that also persist in the absence of cohesin.
 [?] are PRC1 mediated-interactions important for gene repression?
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1345,6 +1644,9 @@ PRC1; chromatin interaction
 Dissection of the dachshund locus indicates that PRC1-anchored loops are versatile architectural platforms that persist when surrounding genes are transcriptionally active and fine-tune their expression. ... PRC1-anchored enhancer-promoter loops are developmentally dynamic
 [?] are PRC1 mediated-interactions important for gene repression?
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 PCGF Homologs, CBX Proteins, and RYBP Define Functionally Distinct PRC1 Family Complexes
@@ -1358,6 +1660,9 @@ vPRC1; Rybp
 [quote]
 only RYBP stimulates the activity of RING1B toward H2AK119ub1, suggesting a central role in PRC1 function
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 PR-DUB maintains the expression of critical genes through FOXK1/2- A nd ASXL1/2/3-dependent recruitment to chromatin and H2AK119ub1 deubiquitination
@@ -1367,6 +1672,9 @@ BAP1
 
 [quote]
 minimal overlap and functional interaction between BAP1 and PRC2 in embryonic stem cells
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1378,6 +1686,9 @@ Jarid2; PRC2
 [quote]
 We find that JARID2 recognizes both the ubiquitin moiety in H2AK119ub1 and the conserved histone H2A-H2B acidic patch. We also observe that the tandem zinc fingers of AEBP2 interact with ubiquitin and the histone H2A-H2B surface on the other side of the nucleosome
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Activity of PRC1 and Histone H2AK119 Monoubiquitination: Revising Popular Misconceptions
@@ -1388,12 +1699,18 @@ H2Aub
 [quote]
 note that loss of PRC1-catalytic activity does not impair RING1B binding to those genes in epidermal progenitors.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 An atlas of dynamic chromatin landscapes in mouse fetal development
 
 
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1405,6 +1722,9 @@ H2Aub; H1
 [quote]
 ubiquitination ofH2A did not prevent binding ofhistone H1 but it rather enhanced the binding of this histone to the nucleosome.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 H2A mono-ubiquitination differentiates FACT’s functions in nucleosome assembly and disassembly
@@ -1415,9 +1735,15 @@ H2Aub
 [quote]
 ubH2A greatly restricts FACT binding on nucle- osome and inhibits its activity of nucleosome disas- sembly
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Resetting the epigenetic balance of Polycomb and COMPASS function at enhancers for cancer therapy
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1428,6 +1754,9 @@ SWI; H2Aub
 
 [quote]
 the C-terminal region of SSX confers preferential affinity to repressed, H2AK119Ub-marked nucleosomes, underlying the selective targeting to polycomb-marked genomic regions and synovial sarcoma–specific depen- dency on PRC1 function
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1442,6 +1771,9 @@ H1
 [quote]
 H1 promotes PRC2-mediated H3K27 methylation and inhibits NSD2-mediated H3K36 methylation.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 H2AK121ub in Arabidopsis associates with a less accessible chromatin state at transcriptional regulation hotspots
@@ -1453,6 +1785,9 @@ accessibility; H2Aub
 H2AK121ub/H3K27me3 marks are linked to inaccessible although responsive chromatin. In contrast, only-H3K27me3- marked chromatin is less responsive
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 BAP1 and cancer
@@ -1462,6 +1797,9 @@ unread
 
 [group]
 review
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1473,6 +1811,9 @@ unread
 [group]
 review
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Polycomb complexes associate with enhancers and promote oncogenic transcriptional programs in cancer through multiple mechanisms
@@ -1483,12 +1824,18 @@ PRC1; cancer
 [quote]
 RING1B regulates enhancer activity and gene transcription not only by promoting the expression of oncogenes but also by regulating chromatin accessibility.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Histone ubiquitylation and its roles in transcription and DNA damage response
 
 [group]
 review
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1500,12 +1847,18 @@ vPRV1; Pcgf6
 [quote]
 We further show that a heterodimer of the transcription factors MAX and MGA recruits PCGF6 to target loci.
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Hox gene regulation and timing in embryogenesis
 
 [group]
 review
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1517,6 +1870,9 @@ PRC1; PRC2
 [quote]
 Our studies in the epidermis show that ablation of a single Polycomb complex (either PRC1 or PRC2) results in the retention of the other complex’s histone mark. 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Dynamic Competition of Polycomb and Trithorax in Transcriptional Programming
@@ -1526,6 +1882,9 @@ unread
 
 [group]
 review
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1538,6 +1897,9 @@ H1
 H1 promotes PRC2-mediated H3K27 methylation and inhibits NSD2-mediated H3K36 methylation
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Histone variants H2A.Z and H3.3 coordinately regulate PRC2-dependent H3K27me3 deposition and gene expression regulation in mES cells
@@ -1547,6 +1909,9 @@ H2A.Z; H3.3; PRC2
 
 [quote]
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1565,6 +1930,9 @@ BAP1 Loss Does Not Upregulate HoxA Gene Expression in Hematopoietic Cells
 Loss of ASXL1 Is Associated with Global Loss of H3K27me3
 
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 BAP1 regulates IP3R3-mediated Ca 2+ flux to mitochondria suppressing cell transformation
@@ -1574,6 +1942,9 @@ BAP1
 
 [quote]
 Decreased levels of BAP1 lead to enhanced DNA damage (because of decreased nuclear BAP1 activity), reduced apoptosis (because of decreased cytoplasmic BAP1 activity), and increased cellular transformation (because of both decreased nuclear and cytoplasmic activities)
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1588,6 +1959,9 @@ KDM2B; PRC2
 [quote]
 The structure also suggests how KDM2B might simultaneously function in PRC1.1 and an SCF ubiquitin ligase complex and
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Removal of H2Aub1 by ubiquitin-specific proteases 12 and 13 is required for stable Polycomb-mediated gene repression in Arabidopsis
@@ -1597,6 +1971,9 @@ H2Aub; DUB
 
 [quote]
 We find that PRC1-mediated H2Aub1 is associated with gene responsiveness, and its repressive function requires PRC2 recruitment. We
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1608,6 +1985,9 @@ H2Aub Mass Spec
 [group]
 H2Aub
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1622,6 +2002,9 @@ pre-existing H3K27 methylation directs recruitment and regulates the catalytic a
 [quote]
 the H3K27 methylation patterns in mESCs are not dependent on self-autonomous epigenetic inheritance
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Polycomb Gene Silencing Mechanisms: PRC2 Chromatin Targeting, H3K27me3 'Readout', and Phase Separation-Based Compaction
@@ -1631,6 +2014,9 @@ unread
 
 [group]
 review
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1642,12 +2028,18 @@ unread
 [group]
 review
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 The roles of Polycomb repressive complexes in mammalian development and cancer
 
 [group]
 review
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1658,6 +2050,9 @@ unread
 
 [group]
 review
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]
@@ -1672,6 +2067,9 @@ Loss of H2AK119ub1 induced a rapid displacement of PRC2 activity and a loss of H
 [quote]
 we found that variant PRC1 forms can sense H2AK119ub1 deposition, which contributes to their stabilization specifically at sites where this modification is highly enriched
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Promoter bivalency favors an open chromatin architecture in embryonic stem cells
@@ -1683,10 +2081,16 @@ Bivalency;
 (transcriptional change in MLL2 depletion) relatively modest in non-bivalent genes (Fig. 5i,j). Hence, MLL2 plays a role in maintaining a basal level of accessibility and nascent bidirectional transcription around bivalent TSS
 [?] How does H3K4me3 affect transcription?
 
+[date]
+2022-09-13 16:27:34
+
 ------------------------------------------------------------------------------------------
 [title]
 Polycomb Group Proteins Regulate Chromatin Architecture in Mouse Oocytes and Early Embryos
 
+
+[date]
+2022-09-13 16:27:34
 
 ------------------------------------------------------------------------------------------
 [title]

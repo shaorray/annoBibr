@@ -1,12 +1,14 @@
 
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(R6, cli, RISmed, crayon)
 
-library(R6)
-library(cli)
-library(RISmed)
-library(crayon)
+# library(R6)
+# library(cli)
+# library(RISmed)
+# library(crayon)
 
-library(DBI)
-library(RSQLite)
+# library(DBI)
+# library(RSQLite)
 
 # DBI::dbConnect(RSQLite::SQLite(), path = file)
 
@@ -110,70 +112,149 @@ note_R6 <- R6Class("Note",
                        }
                        cat(as.character(self$date), "\n", sep = "")
                        cat(rep("-", cli::console_width()), "\n\n", sep = "")
+                     },
+                     
+                     search = function(keyword = "keyword", field = NA) {
+                       
+                       is_match <- FALSE
+                       
+                       if (!is.na(field) & all(field %in% names(self))) {
+                         is_match <- is_match | any(grepl(keyword, self[[field]]))
+                         self[[field]] <- gsub(keyword, crayon::bgRed(keyword), 
+                                               self[[field]], ignore.case = TRUE)
+                       }
+                       
+                       for (field in c("title", "group", "tag", "summary", "quote", "question")) {
+                         is_match <- is_match | any(grepl(keyword, self[[field]]))
+                         self[[field]] <- gsub(keyword, crayon::bgYellow(keyword), 
+                                               self[[field]], ignore.case = TRUE)
+                       }
+                       
+                       if (is_match) {
+                         invisible(self)
+                       } else {
+                         invisible(NULL)
+                       }
                      }
                    )
                    )
 
 # functions -----------------------------------------------------------------------
+insert_line <- function(file, at_row, new_line, is.overwrite = TRUE) {
+  
+  file_name <- gsub(".*\\/(.*)\\..*", "\\1", file)
+  file_path <- gsub(paste0(file_name, "\\..*"), "", file)
+  file_type <- gsub(paste0(".*", file_name, "\\.(.*)"), "\\1", file)
+  
+  if (is.overwrite) {
+    new_file_name <- paste0(file_path, file_name, "_new.", file_type)
+  } else {
+    new_file_name <- file
+  }
+  
+  file_lines <- readLines(file)
+  write(x = file_lines[seq(1, at_row)], 
+        file = new_file_name, append = FALSE)
+  write(x = new_line, 
+        file = new_file_name, append = TRUE)
+  write(x = file_lines[seq(at_row + 1, length(file_lines))], 
+        file = new_file_name, append = TRUE)
+}
 
-translate_rmd_note <- function(file) {
+
+translate_rmd_note <- function(file, is.overwrite = FALSE) {
   
   # read by lines
-  rmd <- readLines(file)
+  rmd_lines <- readLines(file)
   
   # check title lines
-  idx <- grep("^\\[title", rmd)
-  idx_next <- c(idx[-1] - 1, length(rmd))
+  idx <- grep("^\\[title", rmd_lines)
+  idx_next <- c(idx[-1] - 1, length(rmd_lines))
   
   # assign values
   note_list <- list()
   idx_used <- NULL
+  
   for (i in seq_along(idx)) {
-    .title <- rmd[idx[i] + 1]
+    .title <- rmd_lines[idx[i] + 1]
     if (is.na(.title) || nchar(.title) == 0) next
     idx_used <- c(idx_used, idx[i])
     
     # create R6 object
     tmp <- note_R6$new(.title)
-    i_rmd <- rmd[seq(idx[i] + 1, idx_next[i])]
+    i_rmd_lines <- rmd_lines[seq(idx[i] + 1, idx_next[i])]
     
     # fetch attributes
-    for (x in c("tag", "group", "summary", "quote")) {
+    for (x in c("tag", "group", "summary", "quote", "date")) {
       
-      i_x <- grep(paste0("^\\[", x), i_rmd)
+      i_x <- grep(paste0("^\\[", x), i_rmd_lines)
       
       if (length(i_x) > 0) {
-        if (x %in% c("tag", "group")) 
-          {
-          tmp[[x]] <- unlist(strsplit(i_rmd[i_x + 1], "; |;"))
+        if (x %in% c("tag", "group")) {
           
-        } else if (x == "summary")
-          {
-          tmp[[x]] <- i_rmd[i_x + 1]
+          tmp[[x]] <- unlist(strsplit(i_rmd_lines[i_x + 1], "; |;"))
           
-        } else if (x == "quote") 
-          {
-          i_x_q <- grep("^\\[\\?", i_rmd)
+        } else if (x == "summary") {
+          
+          tmp[[x]] <- i_rmd_lines[i_x + 1]
+          
+        } else if (x == "quote") {
+          
+          i_x_q <- grep("^\\[\\?", i_rmd_lines)
           
           if (length(i_x_q) > 0) {
+            
             q_2_q <- rowSums(matrix(sapply(i_x, function(n) i_x_q > n), nrow = length(i_x_q)))
             q_2_q <- q_2_q[q_2_q > 0]
+            
           } else {
+            
             q_2_q <- NA
+            
           }
           
           for (n in seq_along(i_x)) {
-            tmp[["add_quote"]](quote = i_rmd[i_x[n] + 1], 
+            tmp[["add_quote"]](quote = i_rmd_lines[i_x[n] + 1], 
                                question = ifelse(!n %in% q_2_q, 
-                                                 NA, i_rmd[i_x_q[q_2_q == n]]))
+                                                 NA, 
+                                                 gsub("^\\[\\?\\]\\s*", "", i_rmd_lines[i_x_q[q_2_q == n]])))
           }
-        }
+          
+        } else if (x == "date") {
+          
+          tmp[["date"]] <- i_rmd_lines[i_x + 1]
+          
+        } 
         
       }
+    } # end of fetch
+    
+    # add lines for missing info, e.g. date
+    if (!any(grepl("^\\[date", i_rmd_lines))) {
+      rmd_lines <- c(rmd_lines[seq(1, idx_next[i] - 1)],
+                     "[date]", as.character(tmp[["date"]]), "",
+                     rmd_lines[seq(idx_next[i], length(rmd_lines))])
+      idx <- idx + 3
+      idx_next <- idx_next + 3
     }
+    
     note_list <- c(note_list, tmp)
+  } # end of looping lines
+  
+  # write processed file
+  file_name <- gsub(".*\\/(.*)\\..*", "\\1", file)
+  file_path <- gsub(paste0(file_name, "\\..*"), "", file)
+  file_type <- gsub(paste0(".*", file_name, "\\.(.*)"), "\\1", file)
+  
+  if (is.overwrite) {
+    new_file_name <- paste0(file_path, file_name, "_new.", file_type)
+  } else {
+    new_file_name <- file
   }
-  names(note_list) <- rmd[idx_used + 1]
+  
+  write(x = rmd_lines, file = new_file_name)
+  
+  names(note_list) <- rmd_lines[idx_used + 1]
   note_list
 }
 
@@ -206,7 +287,16 @@ translate_ris_note <- function(file) {
 # translate_bib_note <- function(file) {}
 
 
-# search()
+search <- function(note_list, keyword, field = NA) {
+  # hits with highlight will be returned in a list object
+  out_list <- list()
+  for (note_i in note_list) {
+    clone_i <- note_i$clone()
+    out_list <- c(out_list, clone_i$search(keyword = keyword, field = field))
+  }
+  out_list
+}
+
 # delete()
 # print()
 
