@@ -27,6 +27,12 @@ A reference card can be viewed by seletion in console, e.g. `ntoe_list[[2]]`
 <img width="956" alt="Screenshot 2022-07-31 at 22 42 29" src="https://user-images.githubusercontent.com/8829224/182044589-96902912-3196-409f-94de-d856edbee259.png">
 
 
+search() function will subset the note entries with keyword matches.
+```
+result_list <- search(note_list, "keyword")
+```
 
-Search utility and Pubmed cross-reference will be implemented soon. 
-
+Pubmed cross-reference will fetch and add `year`, `authors`, and `abstract` to the note object.
+```
+note_one$pubmed()
+```
