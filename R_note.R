@@ -70,6 +70,9 @@ note_R6 <- R6Class("Note",
                      quote = NULL,
                      question = NULL,
                      date = NULL,
+                     authors = NULL,
+                     year = NULL,
+                     abstract = NULL,
                      
                      initialize = function(title = NULL) {
                        if (is.character(title) & length(title) == 1) {
@@ -101,7 +104,7 @@ note_R6 <- R6Class("Note",
                        invisible(self)
                      },
                      
-                     print = function(...) {
+                     print = function(is.all = FALSE) {
                        cat(rep("-", cli::console_width()), "\n", sep = "")
                        cat("Group: ", sapply(self$group, function(x) paste0(crayon::bgWhite(crayon::black(x)), " ")), "\n", sep = "")
                        cat("Tag: ", sapply(self$tag, function(x) paste0(crayon::bgWhite(crayon::black(x)), " ")), "\n\n", sep = "")
@@ -110,24 +113,30 @@ note_R6 <- R6Class("Note",
                          cat(crayon::bgCyan('[Quote]'), ' "', self$quote[i], '"', "\n", sep = "")
                          cat(crayon::bgBlue("[?]"), " ", self$question[i], "\n\n", sep = "")
                        }
+                       if (is.all) {
+                         cat(crayon::bgWhite(crayon::black("[year]")), " ", crayon::bold(self$year), "\n\n", sep = "")
+                         cat(crayon::bgWhite(crayon::black("[authors]")), " ", crayon::bold(self$authors), "\n\n", sep = "")
+                         cat(crayon::bgWhite(crayon::black("[abstract]")), " ", crayon::bold(self$abstract), "\n\n", sep = "")
+                       }
                        cat(as.character(self$date), "\n", sep = "")
                        cat(rep("-", cli::console_width()), "\n\n", sep = "")
                      },
                      
+                     # enable keyword match, otherwise returns NULL
                      search = function(keyword = "keyword", field = NA) {
                        
-                       is_match <- FALSE
+                       is_match = FALSE
                        
                        if (!is.na(field) & all(field %in% names(self))) {
-                         is_match <- is_match | any(grepl(keyword, self[[field]], ignore.case = TRUE))
-                         self[[field]] <- gsub(keyword, crayon::bgRed(keyword), 
-                                               self[[field]], ignore.case = TRUE)
+                         is_match = is_match | any(grepl(keyword, self[[field]], ignore.case = TRUE))
+                         self[[field]] = gsub(keyword, crayon::bgRed(keyword), 
+                                              self[[field]], ignore.case = TRUE)
                        }
                        
                        for (field in c("title", "group", "tag", "summary", "quote", "question")) {
-                         is_match <- is_match | any(grepl(keyword, self[[field]], ignore.case = TRUE))
-                         self[[field]] <- gsub(keyword, crayon::bgYellow(keyword), 
-                                               self[[field]], ignore.case = TRUE)
+                         is_match = is_match | any(grepl(keyword, self[[field]], ignore.case = TRUE))
+                         self[[field]] = gsub(keyword, crayon::bgYellow(keyword), 
+                                              self[[field]], ignore.case = TRUE)
                        }
                        
                        if (is_match) {
@@ -135,34 +144,50 @@ note_R6 <- R6Class("Note",
                        } else {
                          invisible(NULL)
                        }
+                     },
+                     
+                     pubmed = function() {
+                       # Gather complete information of a paper given its object
+                       
+                       if (!is.null(self[["title"]])) {
+                         query = RISmed::EUtilsSummary(self[["title"]],
+                                                       type = "esearch",
+                                                       db = "pubmed", 
+                                                       datetype = "pdat")
+                         res = RISmed::EUtilsGet(query)
+                         res_authors = RISmed::Author(res)
+                         year = RISmed::YearAccepted(res)
+                         abstract = RISmed::AbstractText(res)
+                         
+                         if (length(res_authors) >= 1) {
+                           res_authors = res_authors[1]
+                           year = year[1]
+                           abstract = abstract[1]
+                           
+                           res_authors = as.data.frame(res_authors)
+                           res_authors = paste(res_authors[[3]], res_authors[[2]],
+                                               sep = ", ", collapse = "\n")
+                           
+                           self$authors = res_authors
+                           self$year = year
+                           self$abstract = abstract
+                           
+                           invisible(self)
+                         } 
+                       }
                      }
                    )
                    )
 
 # functions -----------------------------------------------------------------------
-insert_line <- function(file, at_row, new_line, is.overwrite = TRUE) {
-  
-  file_name <- gsub(".*\\/(.*)\\..*", "\\1", file)
-  file_path <- gsub(paste0(file_name, "\\..*"), "", file)
-  file_type <- gsub(paste0(".*", file_name, "\\.(.*)"), "\\1", file)
-  
-  if (is.overwrite) {
-    new_file_name <- paste0(file_path, file_name, "_new.", file_type)
-  } else {
-    new_file_name <- file
-  }
-  
-  file_lines <- readLines(file)
-  write(x = file_lines[seq(1, at_row)], 
-        file = new_file_name, append = FALSE)
-  write(x = new_line, 
-        file = new_file_name, append = TRUE)
-  write(x = file_lines[seq(at_row + 1, length(file_lines))], 
-        file = new_file_name, append = TRUE)
-}
 
-
-translate_rmd_note <- function(file, is.overwrite = FALSE) {
+translate_rmd_note <- function(file, is.overwrite = FALSE, is.Xref = FALSE) {
+  # Args:
+  # is.overwrite: add date and cross-references in the original file, or a new file
+  # is.Xref:      add pubmed cross-references of authors, years, and abstract
+  
+  if (is.Xref) 
+    message("Fetching Pubmed cross-references...")
   
   # read by lines
   rmd_lines <- readLines(file)
@@ -243,6 +268,35 @@ translate_rmd_note <- function(file, is.overwrite = FALSE) {
       idx_next <- idx_next + 3
     }
     
+    if (is.Xref) {
+      tmp$pubmed()
+      # add year
+      if (!any(grepl("^\\[year", i_rmd_lines))) {
+        rmd_lines <- c(rmd_lines[seq(1, idx_next[i] - 1)],
+                       "[year]", as.character(tmp[["year"]]), "",
+                       rmd_lines[seq(idx_next[i], length(rmd_lines))])
+        idx <- idx + 3
+        idx_next <- idx_next + 3
+      }
+      # add authors
+      if (!any(grepl("^\\[authors", i_rmd_lines))) {
+        rmd_lines <- c(rmd_lines[seq(1, idx_next[i] - 1)],
+                       "[authors]", as.character(tmp[["authors"]]), "",
+                       rmd_lines[seq(idx_next[i], length(rmd_lines))])
+        idx <- idx + 3
+        idx_next <- idx_next + 3
+      }
+      # add abstract
+      if (!any(grepl("^\\[abstract", i_rmd_lines))) {
+        rmd_lines <- c(rmd_lines[seq(1, idx_next[i] - 1)],
+                       "[abstract]", as.character(tmp[["abstract"]]), "",
+                       rmd_lines[seq(idx_next[i], length(rmd_lines))])
+        idx <- idx + 3
+        idx_next <- idx_next + 3
+      }
+    }
+    
+    
     note_list <- c(note_list, tmp)
   } # end of looping lines
   
@@ -252,9 +306,9 @@ translate_rmd_note <- function(file, is.overwrite = FALSE) {
   file_type <- gsub(paste0(".*", file_name, "\\.(.*)"), "\\1", file)
   
   if (is.overwrite) {
-    new_file_name <- paste0(file_path, file_name, "_new.", file_type)
-  } else {
     new_file_name <- file
+  } else {
+    new_file_name <- paste0(file_path, file_name, "_new.", file_type)
   }
   
   write(x = rmd_lines, file = new_file_name)
@@ -304,30 +358,11 @@ search <- function(note_list, keyword, field = NA) {
 
 
 
-pubmed <- function(.title) {
-  .title <- "H2A.Z.1 Monoubiquitylation Antagonizes BRD2 to Maintain Poised Chromatin in ESCs"
-  
-  res <- EUtilsSummary(.title,
-                       type = "esearch",
-                       db = "pubmed", 
-                       datetype = "pdat")
-  
-  authors <- RISmed::Author(RISmed::EUtilsGet(res))
-  
-  
-  if (length(authors) == 1) {
-    authors <- authors[[1]][, c("ForeName", "LastName")]
-  } else {
-    authors <- NULL
-  }
-  
-}
-
-
 # read line -----------------------------------------------------------------------
 
 current_file <- rstudioapi::getSourceEditorContext()$path
-note_list <- translate_rmd_note(current_file)
+
+note_list <- translate_rmd_note(current_file, is.overwrite = TRUE, is.Xref = TRUE)
 
 
 # objects -------------------------------------------------------------------------
