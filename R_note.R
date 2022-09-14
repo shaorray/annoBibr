@@ -175,7 +175,12 @@ translate_rmd_note <- function(file, is.overwrite = FALSE) {
   note_list <- list()
   idx_used <- NULL
   
+  # set progress bar
+  pb <- txtProgressBar(min = 1, max = length(idx), style = 3)
+  
   for (i in seq_along(idx)) {
+    setTxtProgressBar(pb, i)
+    
     .title <- rmd_lines[idx[i] + 1]
     if (is.na(.title) || nchar(.title) == 0) next
     idx_used <- c(idx_used, idx[i])
@@ -296,9 +301,6 @@ search <- function(note_list, keyword, field = NA) {
   }
   out_list
 }
-
-# delete()
-# print()
 
 
 
