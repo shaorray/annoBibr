@@ -299,7 +299,6 @@ translate_rmd_note <- function(file, is.overwrite = FALSE, is.Xref = FALSE) {
       }
     }
     
-    
     note_list <- c(note_list, tmp)
   } # end of looping lines
   
