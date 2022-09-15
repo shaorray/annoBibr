@@ -159,7 +159,7 @@ note_R6 <- R6Class("Note",
                          year = RISmed::YearAccepted(res)
                          abstract = RISmed::AbstractText(res)
                          
-                         if (length(res_authors) >= 1) {
+                         if (!is.na(names(res_authors[1])) ) {
                            res_authors = res_authors[1]
                            year = year[1]
                            abstract = abstract[1]
@@ -196,6 +196,10 @@ translate_rmd_note <- function(file, is.overwrite = FALSE, is.Xref = FALSE) {
   idx <- grep("^\\[title", rmd_lines)
   idx_next <- c(idx[-1] - 1, length(rmd_lines))
   
+  # output processed lines
+  out_rmd_lines <- rmd_lines
+  out_idx_next <- idx_next
+  
   # assign values
   note_list <- list()
   idx_used <- NULL
@@ -207,6 +211,9 @@ translate_rmd_note <- function(file, is.overwrite = FALSE, is.Xref = FALSE) {
     setTxtProgressBar(pb, i)
     
     .title <- rmd_lines[idx[i] + 1]
+    .title <- gsub("^\\s*(.*)\\s*$", "\\1", .title) # remove space
+    # cat("\n", .title, "\n")
+    
     if (is.na(.title) || nchar(.title) == 0) next
     idx_used <- c(idx_used, idx[i])
     
@@ -261,38 +268,34 @@ translate_rmd_note <- function(file, is.overwrite = FALSE, is.Xref = FALSE) {
     
     # add lines for missing info, e.g. date
     if (!any(grepl("^\\[date", i_rmd_lines))) {
-      rmd_lines <- c(rmd_lines[seq(1, idx_next[i] - 1)],
+      out_rmd_lines <- c(out_rmd_lines[seq(1, out_idx_next[i] - 1)],
                      "[date]", as.character(tmp[["date"]]), "",
-                     rmd_lines[seq(idx_next[i], length(rmd_lines))])
-      idx <- idx + 3
-      idx_next <- idx_next + 3
+                     out_rmd_lines[seq(out_idx_next[i], length(out_rmd_lines))])
+      out_idx_next <- out_idx_next + 3
     }
     
     if (is.Xref) {
       tmp$pubmed()
       # add year
       if (!any(grepl("^\\[year", i_rmd_lines))) {
-        rmd_lines <- c(rmd_lines[seq(1, idx_next[i] - 1)],
+        out_rmd_lines <- c(out_rmd_lines[seq(1, out_idx_next[i] - 1)],
                        "[year]", as.character(tmp[["year"]]), "",
-                       rmd_lines[seq(idx_next[i], length(rmd_lines))])
-        idx <- idx + 3
-        idx_next <- idx_next + 3
+                       out_rmd_lines[seq(out_idx_next[i], length(out_rmd_lines))])
+        out_idx_next <- out_idx_next + 3
       }
       # add authors
       if (!any(grepl("^\\[authors", i_rmd_lines))) {
-        rmd_lines <- c(rmd_lines[seq(1, idx_next[i] - 1)],
+        out_rmd_lines <- c(out_rmd_lines[seq(1, out_idx_next[i] - 1)],
                        "[authors]", as.character(tmp[["authors"]]), "",
-                       rmd_lines[seq(idx_next[i], length(rmd_lines))])
-        idx <- idx + 3
-        idx_next <- idx_next + 3
+                       out_rmd_lines[seq(out_idx_next[i], length(out_rmd_lines))])
+        out_idx_next <- out_idx_next + 3
       }
       # add abstract
       if (!any(grepl("^\\[abstract", i_rmd_lines))) {
-        rmd_lines <- c(rmd_lines[seq(1, idx_next[i] - 1)],
+        out_rmd_lines <- c(out_rmd_lines[seq(1, out_idx_next[i] - 1)],
                        "[abstract]", as.character(tmp[["abstract"]]), "",
-                       rmd_lines[seq(idx_next[i], length(rmd_lines))])
-        idx <- idx + 3
-        idx_next <- idx_next + 3
+                       out_rmd_lines[seq(out_idx_next[i], length(out_rmd_lines))])
+        out_idx_next <- out_idx_next + 3
       }
     }
     
@@ -311,7 +314,7 @@ translate_rmd_note <- function(file, is.overwrite = FALSE, is.Xref = FALSE) {
     new_file_name <- paste0(file_path, file_name, "_new.", file_type)
   }
   
-  write(x = rmd_lines, file = new_file_name)
+  write(x = out_rmd_lines, file = new_file_name)
   
   names(note_list) <- rmd_lines[idx_used + 1]
   note_list
@@ -362,7 +365,7 @@ search <- function(note_list, keyword, field = NA) {
 
 current_file <- rstudioapi::getSourceEditorContext()$path
 
-note_list <- translate_rmd_note(current_file, is.overwrite = TRUE, is.Xref = TRUE)
+note_list <- translate_rmd_note(current_file, is.overwrite = FALSE, is.Xref = TRUE)
 
 
 # objects -------------------------------------------------------------------------
